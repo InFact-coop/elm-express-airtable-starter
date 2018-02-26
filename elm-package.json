@@ -1,7 +1,8 @@
 {
   "version": "1.0.0",
   "summary": "an elm boilerplate",
-  "repository": "https://github.com/astroash/elm-spa-boiler-plate.git",
+  "repository":
+    "https://github.com/inFact-coop/elm-express-airtable-starter.git",
   "license": "BSD3",
   "source-directories": ["src/elm"],
   "exposed-modules": [],

@@ -2,6 +2,9 @@
    It outputs one file `style.min.css` which you can include in your html
 */
 
+/* imports a CSS reset file */
+@import './_normalize.css';
+
 /* imports all tachyons modules
    (postcss looks for them from node_modules)
 */

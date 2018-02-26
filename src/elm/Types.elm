@@ -3,13 +3,20 @@ module Types exposing (..)
 import Navigation
 
 
-type Route
-    = Home
-
-
 type alias Model =
     { route : Route
     }
+
+
+type RemoteData
+    = NotAsked
+    | Loading
+    | ResponseFailure
+    | ResponseSuccess
+
+
+type Route
+    = Home
 
 
 type Msg

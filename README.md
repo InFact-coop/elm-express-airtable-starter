@@ -1,4 +1,4 @@
-# Law Centres Network
+# The Elm-Express-Airtable Starter Kit
 
 Create a `.env` file containing:
 

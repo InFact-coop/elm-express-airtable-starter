@@ -7,29 +7,25 @@
     "start": "node ./src/server/start",
     "test": "NODE_ENV=test mocha ./tests/*  ",
     "test:watch": "NODE_ENV=test mocha ./tests/* --watch",
-    "elm-watch-debug":
-      "chokidar '**/*.elm' -c 'elm make src/elm/Main.elm --output=public/elm.js --debug'",
-    "elm-watch":
-      "chokidar '**/*.elm' -c 'elm make src/elm/Main.elm --output=public/elm.js'",
-    "css-watch":
-      "postcss ./src/css/index.css --output ./public/style.min.css --watch --config ./postcss.config.js",
+    "elm-watch-debug": "chokidar '**/*.elm' -c 'elm make src/elm/Main.elm --output=public/elm.js --debug'",
+    "elm-watch": "chokidar '**/*.elm' -c 'elm make src/elm/Main.elm --output=public/elm.js'",
+    "just-frontend": "elm-live src/elm/Main.elm --debug --output=public/elm.js --dir=public --open --pushstate & npm run css-watch",
+    "css-watch": "postcss ./src/css/index.css --output ./public/style.min.css --watch --config ./postcss.config.js",
     "dev-frontend": "npm run elm-watch & npm run css-watch",
     "dev-backend": "NODE_ENV=development nodemon ./src/server/start",
-    "css-build":
-      "postcss ./src/css/index.css --output ./public/style.min.css --config ./postcss.config.js",
-    "heroku-postbuild":
-      "npm run css-build; elm-make src/elm/Main.elm --output=public/elm.js --yes"
+    "css-build": "postcss ./src/css/index.css --output ./public/style.min.css --config ./postcss.config.js",
+    "heroku-postbuild": "npm run css-build; elm-make src/elm/Main.elm --output=public/elm.js --yes"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/InFact-coop/LCN.git"
+    "url": "git+https://github.com/InFact-coop/elm-express-airtable-starter.git"
   },
   "author": "inFACT",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/InFact-coop/LCN/issues"
+    "url": "https://github.com/InFact-coop/elm-express-airtable-starter/"
   },
-  "homepage": "https://github.com/InFact-coop/LCN#readme",
+  "homepage": "https://github.com/InFact-coop/elm-express-airtable-starter#readme",
   "devDependencies": {
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",

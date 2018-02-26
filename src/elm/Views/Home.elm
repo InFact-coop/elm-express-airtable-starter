@@ -1,4 +1,4 @@
-module Routes.Home exposing (..)
+module Views.Home exposing (..)
 
 import Html exposing (..)
 import Types exposing (..)
@@ -6,4 +6,4 @@ import Types exposing (..)
 
 home : Model -> Html Msg
 home model =
-    div [] [ text "Home" ]
+    div [] [ text "Welcome home" ]
